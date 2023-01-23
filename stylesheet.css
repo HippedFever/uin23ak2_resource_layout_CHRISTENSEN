@@ -1,0 +1,44 @@
+body {
+    max-width: 1000px;
+    margin: auto;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+header {
+    border: 1px solid grey;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+article {
+    border: 1px solid grey;
+}
+
+button {
+	background-color:#dbdbdb;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:20px;
+	padding:14px 23px;
+}
+button:hover {
+	background-color:#dbdbdb;
+}
+button:active {
+	position:relative;
+	top:1px;
+}
+
+button:focus {
+    background-color: aqua;
+}
+
+#HTMLArt {
+    display: none;
+}
