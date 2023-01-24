@@ -3,7 +3,7 @@
 :root {
     --grey: #7b7b7b;
     --aqua: #25dfe6;
-    --backgroundbutton: #dbdbdb;
+    --backgroundbutton: #f6f2f2;
 }
 
 body {
@@ -17,14 +17,30 @@ h1 {
     padding-left: 2rem;
     color: var(--grey);
     font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+}
+
+p {
+    color: var(--grey);
+    padding-left: 2rem;
+}
+
+ul {
+    padding-left: 2rem;
+    list-style-position: inside;
+}
+
+a {
+    color: var(--aqua);
+    font-weight: bold;
 }
 
 header {
     border: 1px solid var(--grey);
     margin-top: 2rem;
     margin-bottom: 2rem;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 article {

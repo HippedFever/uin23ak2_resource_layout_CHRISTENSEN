@@ -94,3 +94,236 @@ const resources = [
         ]
     },
 ]
+
+
+//Gir knappene mulighet til å gjemme og vise korrekte bokser, dette er en rotete måte å gjøre det på og det vil definitivt være mulighet for å minske koden på et eller annet vis.
+
+function htmlButton(){
+    document.getElementById("HTMLArt").hidden = false;
+    document.getElementById("CSSArt").hidden = true;
+    document.getElementById("JSArt").hidden = true;
+    document.getElementById("ReactArt").hidden = true;
+    document.getElementById("CMSArt").hidden = true;
+    console.log("Changed to HTML tab")
+}
+
+function cssButton(){
+    document.getElementById("HTMLArt").hidden = true;
+    document.getElementById("CSSArt").hidden = false;
+    document.getElementById("JSArt").hidden = true;
+    document.getElementById("ReactArt").hidden = true;
+    document.getElementById("CMSArt").hidden = true;
+    console.log("Changed to CSS tab")
+}
+
+function jsButton(){
+    document.getElementById("HTMLArt").hidden = true;
+    document.getElementById("CSSArt").hidden = true;
+    document.getElementById("JSArt").hidden = false;
+    document.getElementById("ReactArt").hidden = true;
+    document.getElementById("CMSArt").hidden = true;
+    console.log("Changed to JavaScript tab")
+}
+
+function reactButton(){
+    document.getElementById("HTMLArt").hidden = true;
+    document.getElementById("CSSArt").hidden = true;
+    document.getElementById("JSArt").hidden = true;
+    document.getElementById("ReactArt").hidden = false;
+    document.getElementById("CMSArt").hidden = true;
+    console.log("Changed to React tab")
+}
+
+function cmsButton(){
+    document.getElementById("HTMLArt").hidden = true;
+    document.getElementById("CSSArt").hidden = true;
+    document.getElementById("JSArt").hidden = true;
+    document.getElementById("ReactArt").hidden = true;
+    document.getElementById("CMSArt").hidden = false;
+    console.log("Changed to CMS tab")
+}
+
+//starter siden med HTML knapp klikket slik at siden ikke blir tom.
+window.onload = function(){
+    document.getElementById('BTN').click();
+    document.getElementById('BTN').focus()
+}
+
+var textHTML = resources.splice(0,1);
+console.log(textHTML)
+
+var textCSS = resources.splice(0,1);
+console.log(textCSS)
+
+var textJS = resources.splice(0,1);
+console.log(textJS)
+
+var textReact = resources.splice(0,1);
+console.log(textReact)
+
+var textCMS = resources.splice(0,1);
+console.log(textCMS)
+
+//HTML Artikkel
+//Rendrer tekst inn i artikkel
+const HTMLArt = document.getElementById("HTMLArt");
+
+//Lager en for loop som går igjennom textHTML arrayen
+for (let i = 0; i < textHTML.length; i++) {
+    const category = textHTML[i].category;
+    const text = textHTML[i].text;
+
+    // Lager en overskrift som viser kategori
+    const heading = document.createElement("h1");
+    heading.innerText = category;
+    HTMLArt.appendChild(heading);
+
+    //Lager nytt P element for å vise tekst
+    const paragraph = document.createElement("p");
+    paragraph.innerText = text;
+    HTMLArt.appendChild(paragraph);
+
+    // Lager en ny ul element for å vise kilder
+    const list = document.createElement("ul");
+    for (let j = 0; j < textHTML[i].sources.length; j++) {
+        const source = textHTML[i].sources[j];
+
+        //lager et LI element som lager et link element med tittel på link
+        const item = document.createElement("li");
+        item.innerHTML = `<a href="${source.url}">${source.title}</a>`;
+        list.appendChild(item);
+    }
+    HTMLArt.appendChild(list);
+}
+
+
+//CSS Artikkel
+//Rendrer tekst inn i artikkel
+const CSSArt = document.getElementById("CSSArt");
+
+//Lager en for loop som går igjennom textCSS arrayen
+for (let i = 0; i < textCSS.length; i++) {
+    const category = textCSS[i].category;
+    const text = textCSS[i].text;
+
+    // Lager en overskrift som viser kategori
+    const heading = document.createElement("h1");
+    heading.innerText = category;
+    CSSArt.appendChild(heading);
+
+    //Lager nytt P element for å vise tekst
+    const paragraph = document.createElement("p");
+    paragraph.innerText = text;
+    CSSArt.appendChild(paragraph);
+
+    // Lager en ny ul element for å vise kilder
+    const list = document.createElement("ul");
+    for (let j = 0; j < textCSS[i].sources.length; j++) {
+        const source = textCSS[i].sources[j];
+
+        //lager et LI element som lager et link element med tittel på link
+        const item = document.createElement("li");
+        item.innerHTML = `<a href="${source.url}">${source.title}</a>`;
+        list.appendChild(item);
+    }
+    CSSArt.appendChild(list);
+}
+
+
+//JS Artikkel
+//Rendrer tekst inn i artikkel
+const JSArt = document.getElementById("JSArt");
+
+//Lager en for loop som går igjennom textJS arrayen
+for (let i = 0; i < textJS.length; i++) {
+    const category = textJS[i].category;
+    const text = textJS[i].text;
+
+    // Lager en overskrift som viser kategori
+    const heading = document.createElement("h1");
+    heading.innerText = category;
+    JSArt.appendChild(heading);
+
+    //Lager nytt P element for å vise tekst
+    const paragraph = document.createElement("p");
+    paragraph.innerText = text;
+    JSArt.appendChild(paragraph);
+
+    // Lager en ny ul element for å vise kilder
+    const list = document.createElement("ul");
+    for (let j = 0; j < textJS[i].sources.length; j++) {
+        const source = textJS[i].sources[j];
+
+        //lager et LI element som lager et link element med tittel på link
+        const item = document.createElement("li");
+        item.innerHTML = `<a href="${source.url}">${source.title}</a>`;
+        list.appendChild(item);
+    }
+    JSArt.appendChild(list);
+}
+
+
+//React Artikkel
+//Rendrer tekst inn i artikkel
+const ReactArt = document.getElementById("ReactArt");
+
+//Lager en for loop som går igjennom textReact arrayen
+for (let i = 0; i < textReact.length; i++) {
+    const category = textReact[i].category;
+    const text = textReact[i].text;
+
+    // Lager en overskrift som viser kategori
+    const heading = document.createElement("h1");
+    heading.innerText = category;
+    ReactArt.appendChild(heading);
+
+    //Lager nytt P element for å vise tekst
+    const paragraph = document.createElement("p");
+    paragraph.innerText = text;
+    ReactArt.appendChild(paragraph);
+
+    // Lager en ny ul element for å vise kilder
+    const list = document.createElement("ul");
+    for (let j = 0; j < textReact[i].sources.length; j++) {
+        const source = textReact[i].sources[j];
+
+        //lager et LI element som lager et link element med tittel på link
+        const item = document.createElement("li");
+        item.innerHTML = `<a href="${source.url}">${source.title}</a>`;
+        list.appendChild(item);
+    }
+    ReactArt.appendChild(list);
+}
+
+
+//CMS Artikkel
+//Rendrer tekst inn i artikkel
+const CMSArt = document.getElementById("CMSArt");
+
+//Lager en for loop som går igjennom textCMS arrayen
+for (let i = 0; i < textCMS.length; i++) {
+    const category = textCMS[i].category;
+    const text = textCMS[i].text;
+
+    // Lager en overskrift som viser kategori
+    const heading = document.createElement("h1");
+    heading.innerText = category;
+    CMSArt.appendChild(heading);
+
+    //Lager nytt P element for å vise tekst
+    const paragraph = document.createElement("p");
+    paragraph.innerText = text;
+    CMSArt.appendChild(paragraph);
+
+    // Lager en ny ul element for å vise kilder
+    const list = document.createElement("ul");
+    for (let j = 0; j < textCMS[i].sources.length; j++) {
+        const source = textCMS[i].sources[j];
+
+        //lager et LI element som lager et link element med tittel på link
+        const item = document.createElement("li");
+        item.innerHTML = `<a href="${source.url}">${source.title}</a>`;
+        list.appendChild(item);
+    }
+    CMSArt.appendChild(list);
+}
