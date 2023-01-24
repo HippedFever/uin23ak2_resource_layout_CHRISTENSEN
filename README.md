@@ -4,3 +4,6 @@
 
 
 Kilder og ressurser brukt:
+https://stackoverflow.com/questions/7273668/how-to-split-a-long-array-into-smaller-arrays-with-javascript
+
+https://www.w3schools.com/

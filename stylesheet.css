@@ -17,6 +17,22 @@ h1 {
     padding-left: 2rem;
     color: var(--grey);
     font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+}
+
+p {
+    color: var(--grey);
+    padding-left: 2rem;
+}
+
+ul {
+    padding-left: 2rem;
+    list-style-position: inside;
+}
+
+a {
+    color: var(--aqua);
+    font-weight: bold;
 }
 
 header {
